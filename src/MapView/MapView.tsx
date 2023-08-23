@@ -17,8 +17,8 @@ const MapView = forwardRef<MapViewHandle, MapViewProps>(function MapView(
         }
 
         if (waypoints.length === 1) {
-            cameraRef.current?.flyTo(waypoints[0].coordinate);
-            cameraRef.current?.zoomTo(15);
+            /*cameraRef.current?.flyTo(waypoints[0].coordinate);
+            cameraRef.current?.zoomTo(15);*/
             return undefined;
         }
 
@@ -32,6 +32,8 @@ const MapView = forwardRef<MapViewHandle, MapViewProps>(function MapView(
             paddingLeft: mapPadding,
         };
     }, [waypoints]);
+
+    console.log('***Testing output***');
 
     useImperativeHandle(
         ref,
